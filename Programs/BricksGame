@@ -1,0 +1,25 @@
+//code
+#include<stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+     int h=1;
+    while(n!=0)
+    {
+        n=n-h;
+        if(n<1)
+        {
+            printf("Patlu");
+            break;
+        }
+        n=n-h*2;
+        if(n<1)
+        {
+            printf("Motu");
+            break;
+        }
+        h++;
+    }
+    return 0;
+}
