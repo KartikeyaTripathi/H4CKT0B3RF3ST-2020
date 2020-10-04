@@ -1,0 +1,51 @@
+//This question Medium level On Hackerearth platform solved by me.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   ios::sync_with_stdio(0);
+   cin.tie(0);
+   int t;
+   cin>>t;
+   while(t--)
+   {
+      int n;
+      cin>>n;
+      char str[n];
+      cin>>str;
+      int s[n];
+      for(int i=0; i<n; i++)
+      {
+        s[i] = (int) str[i];
+
+       if(s[i]>=0&&s[i]<=69)
+           s[i]=67;
+       else if(s[i]>=70&&s[i]<=72)
+           s[i]=71;
+       else if(s[i]>=73&&s[i]<=76)
+           s[i]=73;
+       else if(s[i]>=77&&s[i]<=81)
+           s[i]=79;
+       else if(s[i]>=82&&s[i]<=86)
+           s[i]=83;
+       else if(s[i]>=87&&s[i]<=93)
+           s[i]=89;
+       else if(s[i]>=94&&s[i]<=99)
+           s[i]=97;
+       else if(s[i]>=100&&s[i]<=102)
+           s[i]=101;
+       else if(s[i]>=103&&s[i]<=105)
+           s[i]=103;
+       else if(s[i]>=106&&s[i]<=108)
+           s[i]=107;
+       else if(s[i]>=109&&s[i]<=111)
+           s[i]=109;
+       else if(s[i]>=112&&s[i]<=127)
+           s[i]=113;
+       cout<<(char) s[i];
+     }
+     cout<<"\n";
+   }
+   return 0;
+}
+  
