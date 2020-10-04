@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int t;
+cin >> t;
+int i;
+for(i=1;i<=t;i++)
+{
+long long int A,B,C,D,K;
+cin >> A >> B >> C >> D >> K;
+long long int x,ans=0;
+for(x=1;x<1000000000;x++)
+{
+if((A*(x*x*x)+B*(x*x)+C*x+D)>K)
+{
+ans=x;
+break;
+}
+}
+cout << (ans-1) << endl;
+}
+return 0;
+}
