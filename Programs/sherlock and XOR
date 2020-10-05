@@ -1,0 +1,24 @@
+//This is also question of bit manipulation on Hackerearth
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	long long int t,n,arr[1000001];
+	cin>>t;
+	while(t--)
+	{
+		cin>>n;
+		for(int i=0;i<n;i++)
+		   cin>>arr[i];
+	    int c=0,d=0;
+		for(int i=0;i<n;i++)
+		{
+			if(arr[i]%2==0)
+			   c++;
+			else
+			   d++;
+		}
+		cout<<(c*d)<<endl;
+	}
+	return 0;
+}
