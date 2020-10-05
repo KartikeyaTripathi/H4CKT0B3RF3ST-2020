@@ -1,0 +1,50 @@
+//Good problem on Binarysearch
+#include<bits/stdc++.h>
+#include<cstdlib>
+using namespace std;
+long int bsearch(long int arr[],int n,int m)
+{
+    long int start=0;
+    long int end=n-1;
+    long int result=-1;
+    while(start<=end)
+    {
+     long int mid=(end+start)/2;
+     if(arr[mid]==m)
+     {
+         result=mid;
+         end=mid-1;
+     }
+     if(arr[mid]>m)
+        end=mid-1;
+     else
+         start=mid+1;
+    }
+    if(result=-1)
+        return start;
+    return result;
+
+}
+int main()
+{
+    long int n;
+    cin>>n;
+    long int arr[n+1];
+    for(int i=0;i<n;i++)
+       cin>>arr[i];
+    sort(arr,arr+n);
+    long int q;
+    cin>>q;
+    while(q--)
+    {
+        long int m,result;
+        cin>>m;
+        if(arr[n-1]<m)
+           result=n;
+        else
+          cout<<bsearch(arr,n,m);
+
+        cout<<result<<"\n";  
+    }
+    return 0;
+}
