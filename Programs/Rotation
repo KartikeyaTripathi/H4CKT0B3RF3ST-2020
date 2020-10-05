@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long int ll;
+int main()
+{
+   ios::sync_with_stdio(0);
+   cin.tie(0);
+   
+    ll n;
+    cin>>n;
+    string s,t,c,d;
+    cin>>s>>t;
+    for(int i=0;i<n;i++)
+    {
+      c=s.substr(i,n-i);
+      d=t.substr(0,n-i);
+      if(c==d)
+      {
+       cout<<i;
+       break;
+       }
+    }
+   return 0;
+}
+  
