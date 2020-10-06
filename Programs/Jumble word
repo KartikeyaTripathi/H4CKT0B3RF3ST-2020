@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   ios::sync_with_stdio(0);
+   cin.tie(0);
+   int n;
+   cin>>n;
+   while(n--)
+   {
+   string s;
+   cin>>s;
+   int len=s.length();
+   for(int i=0;i<len;i++)
+   {
+      if(isupper(s[i]))
+         s[i]=tolower(s[i]);
+      if(s[i]=='y'||s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||
+         s[i]=='u')
+          continue;
+      else
+         cout<<"."<<s[i];
+      }
+      cout<<"\n";
+   }
+   return 0;
+}
+  

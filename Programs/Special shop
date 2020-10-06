@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+#include<algorithm>
+using namespace std;
+int main()
+{
+   ios::sync_with_stdio(0);
+   cin.tie(0);
+
+   long int t;
+   cin>>t;
+   while(t--)
+   {
+      long double n,a,b;
+      long int ans=0;
+      cin>>n>>a>>b;
+      long double x = round((b*n)/(a+b));
+      ans=(a*x*x)+(b*((n-x)*(n-x)));
+      cout<<ans<<"\n";
+   }
+   return 0;
+}
+  
