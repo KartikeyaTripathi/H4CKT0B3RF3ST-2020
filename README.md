@@ -64,4 +64,4 @@
 [![ForTheBadge makes-people-smile](http://ForTheBadge.com/images/badges/makes-people-smile.svg)](http://ForTheBadge.com)
 [![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Naereen/)
 
-## <div align="center">🤞Happy Coding🤞</div>
+## <div align="center">🤞Happy Coding🤞</div> 
