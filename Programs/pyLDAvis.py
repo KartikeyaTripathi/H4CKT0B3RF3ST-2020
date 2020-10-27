@@ -1,5 +1,12 @@
-#Visualize the topic based clustering for words in doc_term_matrix
+#Importing data
+!wget --no-check-certificate \
+  https://storage.googleapis.com/laurencemoroney-blog.appspot.com/bbc-text.csv \
+  -O /tmp/bbc-text.csv
 
+import pandas as pd
+data=pd.read_csv(r"bbc-text.csv")
+  
+#Visualize the topic based clustering for words in doc_term_matrix
 from gensim.models import ldamodel
 # Instantiate LDA model
 lda = ldamodel.LdaModel
