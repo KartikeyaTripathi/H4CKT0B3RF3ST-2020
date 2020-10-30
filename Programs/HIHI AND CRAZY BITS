@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define fastio ios_base::sync_with_stdio(false); cin.tie(0);cout.tie(0)
+#define lli long long int
+
+int main()
+{
+fastio;
+int t; 
+cin>>t;
+while(t--)
+{
+   lli n,i=0; 
+   cin>>n;
+  while(n & (1<<i)) //checking for rightmost unset bit('0') in binary
+  {
+    i++;
+  }
+
+  n+=(1<<i); //changing the rightmost unset bit('0') to set bit('1')
+
+  cout<<n<<"\n";
+}
+return 0;
+}
