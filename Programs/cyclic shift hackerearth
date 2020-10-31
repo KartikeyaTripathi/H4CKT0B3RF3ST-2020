@@ -1,0 +1,69 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   ios::sync_with_stdio(0);
+   cin.tie(0);
+   
+   int t;
+   cin>>t;
+   while(t--)
+   {
+     int  arr[32],brr[100000],N,r=0,m;
+     char c;
+     cin>>N>>m>>c;
+     for(int j=0;j<16;j++)
+        arr[j]=0;
+     int e=15;
+     while(N!=0)
+     {
+        arr[e]=N%2;
+        N=N/2;
+        e--;
+     }
+     if(c=='L')
+     {
+        int j,k=0;
+        for(j=m;j<=15;j++)
+        {
+           brr[k]=arr[j];
+           k++;
+        }
+        for(j=0;j<m;j++)
+        {
+           brr[k]=arr[j];
+           k++;
+        }
+        k--;
+        for(int q=0;q<16;q++)
+        {
+           r=r+(1<<q)*brr[k];
+           k--;
+        }
+        cout<<r<<"\n";
+     }
+     else
+     {
+        int j,k=0;
+        for(j=16-m;j<16;j++)
+        {
+           brr[k]=arr[j];
+           k++;
+        }
+        for(j=0;j<=15-m;j++)
+        {
+           brr[k]=arr[j];
+           k++;
+        }
+        k--;
+        for(int q=0;q<16;q++)
+        {
+           r=r+(1<<q)*brr[k];
+           k--;
+        }
+        cout<<r<<"\n";
+     }
+   }
+   return 0;
+}
+  
